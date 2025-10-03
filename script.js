@@ -1,6 +1,9 @@
 
 
     
+(function() {
+
+    
     const el = (tag, attrs = {}, children = []) => {
       const node = document.createElement(tag);
       Object.entries(attrs).forEach(([k, v]) => {
@@ -103,5 +106,5 @@
         lista.appendChild(li);
       });
     });
-  });
+
 })();
