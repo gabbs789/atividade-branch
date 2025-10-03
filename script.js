@@ -74,4 +74,34 @@
     const { nome, idade } = pessoa;
     console.log('Pessoa:', pessoa, 'nome:', nome, 'idade:', idade);
 
-   
+    
+    console.log('=== Promises/async ===');
+    function esperar(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
+    async function exemploAsync() {
+      console.log('Esperando 500ms...');
+      await esperar(500);
+      console.log('Pronto!');
+    }
+    exemploAsync();
+
+
+    btnMensagem.addEventListener('click', () => {
+      contador++;
+      mensagem.textContent = `Botão clicado ${contador} vez(es).`;
+    });
+
+    btnSaudar.addEventListener('click', () => {
+      const n = inputNome.value.trim() || 'Visitante';
+      saudacao.textContent = `Olá, ${n}!`;
+    });
+
+    btnLista.addEventListener('click', () => {
+      lista.innerHTML = '';
+      numeros.forEach((n) => {
+        const li = document.createElement('li');
+        li.textContent = `Número ${n}`;
+        lista.appendChild(li);
+      });
+    });
+  });
+})();
