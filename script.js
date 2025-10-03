@@ -28,3 +28,21 @@
     const secDom = el('section', {}, [el('h2', { text: 'Eventos e DOM' }), btnMensagem, mensagem]);
 
     
+    const inputNome = el('input', { id: 'nome', placeholder: 'Seu nome' });
+    const btnSaudar = el('button', { id: 'btnSaudar', text: 'Saudar' });
+    const saudacao = el('p', { id: 'saudacao' });
+    const secInput = el('section', {}, [el('h2', { text: 'Interação com Input' }), inputNome, btnSaudar, saudacao]);
+
+    
+    const btnLista = el('button', { id: 'btnLista', text: 'Gerar lista' });
+    const lista = el('ul', { id: 'lista' });
+    const secLista = el('section', {}, [el('h2', { text: 'Lista (Array)' }), btnLista, lista]);
+
+    
+    document.body.appendChild(titulo);
+    document.body.appendChild(intro);
+    document.body.appendChild(secDom);
+    document.body.appendChild(secInput);
+    document.body.appendChild(secLista);
+
+    
